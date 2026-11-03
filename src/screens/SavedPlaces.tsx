@@ -2,8 +2,8 @@
 // content/places.yaml), and one place in full with Delete and Edit. Back → Note filled (8).
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { countPlaces, fill, myPlaces, placeChip, text } from '../content';
-import { useSessionState } from '../lib/session';
+import { countPlaces, fill, myPlaces, placeChip, placeKey, text } from '../content';
+import { useSavedState } from '../lib/session';
 import { sx } from '../lib/sx';
 import { Check, ChevronLeft } from '../components/icons';
 import { Photo } from '../components/Photo';
@@ -15,7 +15,8 @@ const chip = sx('padding: 6px 10px; border-radius: 999px; border: 1px solid #CFC
 const backStyle = sx('width: 44px; height: 44px; border: none; background: transparent; border-radius: 999px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #111111; text-decoration: none');
 
 export function SavedPlaces() {
-  const [kept, setKept] = useSessionState('saved.kept', () => myPlaces.map((p) => p.id));
+  // Deleted places are remembered on the phone; new places added to places.yaml still show up.
+  const [deleted, setDeleted] = useSavedState<string[]>('places.deleted', []);
   const [view, setView] = useState<'grid' | 'place'>('grid');
   const [open, setOpen] = useState(myPlaces[0].id);
   const [confirm, setConfirm] = useState(false);
@@ -27,7 +28,7 @@ export function SavedPlaces() {
     return () => clearTimeout(timer);
   }, [toast]);
 
-  const list = myPlaces.filter((p) => kept.includes(p.id));
+  const list = myPlaces.filter((p) => !deleted.includes(placeKey(p.place)));
   const p = myPlaces.find((x) => x.id === open)!.place;
   const by = p.recommended_by ?? '';
   const isGrid = view === 'grid';
@@ -113,7 +114,7 @@ export function SavedPlaces() {
           <div role="dialog" aria-modal="true" aria-labelledby="delTitle" style={sx('background: #FFFFFF; border-radius: 24px 24px 0 0; padding: 24px 20px 28px; display: flex; flex-direction: column; gap: 10px')}>
             <h2 id="delTitle" style={sx('margin: 0; font-size: 20px; font-weight: 700')}>{t.delete_title}</h2>
             <p style={sx('margin: 0 0 8px; font-size: 15px; line-height: 1.5; color: #3D3D3D')}>{t.delete_text}</p>
-            <button onClick={() => { setKept(kept.filter((id) => id !== open)); setView('grid'); setConfirm(false); setToast(true); }} style={sx('height: 52px; border-radius: 14px; border: none; background: #B42318; color: #FFFFFF; font-size: 15px; font-weight: 600; cursor: pointer')}>{t.delete_button}</button>
+            <button onClick={() => { setDeleted([...deleted, placeKey(p)]); setView('grid'); setConfirm(false); setToast(true); }} style={sx('height: 52px; border-radius: 14px; border: none; background: #B42318; color: #FFFFFF; font-size: 15px; font-weight: 600; cursor: pointer')}>{t.delete_button}</button>
             <button onClick={() => setConfirm(false)} style={sx('height: 44px; border-radius: 14px; border: none; background: transparent; color: #3D3D3D; font-size: 14px; font-weight: 600; cursor: pointer')}>{t.cancel_button}</button>
           </div>
         </div>

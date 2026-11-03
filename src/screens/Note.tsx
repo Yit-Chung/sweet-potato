@@ -1,8 +1,9 @@
 // Screens 6 and 8 · Note tab: a journal page per stop and day. Screen 8 (`filled`) is the
 // same page after keeping a place: an example entry plus the first of your saved places.
+// The note you write on screen 6 is kept on the phone; screen 8's example is not.
 import { Link } from 'react-router-dom';
 import { addDays, fill, myPlaces, routeStops, text, tripDayIndex, tripStart, weekdayDate } from '../content';
-import { useSessionState } from '../lib/session';
+import { useSavedState, useSessionState } from '../lib/session';
 import { sx } from '../lib/sx';
 import { TabBar } from '../components/TabBar';
 import { Check, ChevronRight } from '../components/icons';
@@ -14,7 +15,9 @@ export function Note({ filled = false }: { filled?: boolean }) {
   const k = filled ? 'noteFilled' : 'note';
   const [stop, setStop] = useSessionState(k + '.stop', 0);
   const [day, setDay] = useSessionState(k + '.day', stopDays[0][0]);
-  const [entry, setEntry] = useSessionState(k + '.text', filled ? t.example_entry : '');
+  const [note, setNote] = useSavedState('note.text', '');
+  const [example, setExample] = useSessionState('noteFilled.text', t.example_entry);
+  const [entry, setEntry] = filled ? [example, setExample] : [note, setNote];
   const picks = filled ? myPlaces.slice(0, 1).map((p) => p.place) : [];
 
   const [first, last] = stopDays[stop];

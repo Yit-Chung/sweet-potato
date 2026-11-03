@@ -1,8 +1,8 @@
 // Screen 3 · Read a pick: one friend's place in full (photo, why, what, when), with
-// Save / Visited toggles and Directions. Back returns to the city it was opened from.
+// Save / Visited toggles (kept on the phone) and Directions. Back returns to the city it was opened from.
 import { Navigate, useParams } from 'react-router-dom';
-import { directionsUrl, fill, placeChip, places, text } from '../content';
-import { useSessionState } from '../lib/session';
+import { directionsUrl, fill, placeChip, placeKey, places, text } from '../content';
+import { useSavedState } from '../lib/session';
 import { sx } from '../lib/sx';
 import { useBack } from '../lib/useBack';
 import { ChevronLeft } from '../components/icons';
@@ -26,8 +26,11 @@ export function ReadPick() {
 function PickView({ id }: { id: number }) {
   const p = places[id];
   const back = useBack('/explore');
-  const [saved, setSaved] = useSessionState(`pick.${id}.saved`, false);
-  const [visited, setVisited] = useSessionState(`pick.${id}.visited`, false);
+  const key = placeKey(p);
+  const [savedKeys, setSavedKeys] = useSavedState<string[]>('picks.saved', []);
+  const [visitedKeys, setVisitedKeys] = useSavedState<string[]>('picks.visited', []);
+  const saved = savedKeys.includes(key), visited = visitedKeys.includes(key);
+  const toggle = (keys: string[]) => (keys.includes(key) ? keys.filter((k) => k !== key) : [...keys, key]);
   const by = p.recommended_by ?? '';
   const sections = [[t.why_label, p.why], [t.what_label, p.what], [t.when_label, p.when]].filter(([, body]) => body);
 
@@ -83,11 +86,11 @@ function PickView({ id }: { id: number }) {
       </div>
 
       <div style={sx('display: flex; align-items: center; gap: 8px; padding: 12px 16px 28px; border-top: 1px solid #E3E3E3; background: #FFFFFF')}>
-        <button onClick={() => setSaved(!saved)} aria-pressed={saved} style={pill(saved)}>
+        <button onClick={() => setSavedKeys(toggle)} aria-pressed={saved} style={pill(saved)}>
           <svg {...icon}><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /></svg>
           {saved ? t.saved_button : t.save_button}
         </button>
-        <button onClick={() => setVisited(!visited)} aria-pressed={visited} style={pill(visited)}>
+        <button onClick={() => setVisitedKeys(toggle)} aria-pressed={visited} style={pill(visited)}>
           <svg {...icon}><circle cx="12" cy="12" r="9" /><path d="M8 12l3 3 5-6" /></svg>
           {visited ? t.been_button : t.visited_button}
         </button>

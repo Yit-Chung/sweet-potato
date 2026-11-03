@@ -20,6 +20,9 @@ const indexed = places.map((place, id) => ({ place, id }));
 export const myPlaces = indexed.filter((p) => p.place.type === 'my-place');
 export const picksForStop = (stop: string) => indexed.filter((p) => p.place.type === 'friend-pick' && p.place.stop === stop);
 export const friendPickCount = indexed.filter((p) => p.place.type === 'friend-pick').length;
+/** A place's lasting key ("Jiufen/Amei Teahouse") for what's saved on the phone. Unlike the id,
+ *  it doesn't change when places are added or moved in places.yaml. */
+export const placeKey = (p: Place) => `${p.stop}/${p.name}`;
 
 /** Stops with dates (the trip route), and stops with a pin on the Explore map. */
 export const routeStops = trip.stops.filter((s) => s.arrive && s.leave);

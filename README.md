@@ -100,6 +100,8 @@ iPhone **HEIC** photos don't work in browsers. Export them as JPG first. The che
 ## Checklist, phrases, stops and wording
 
 - **Checklist** (`content/checklist.yaml`): one entry per item. `hint` is the small grey line. `ticked: yes` makes the item start ticked. Items appear in file order.
+
+**What the phone remembers:** checklist ticks, saved and visited places, deleted places and the note are kept in the phone's browser, so they survive refreshing or closing the app. (Nothing is remembered in private browsing.) New items and places you add to the content files still show up. `ticked:` only sets the starting tick for phones that haven't opened the checklist yet. If you rename a place or checklist item, phones forget its tick or save.
 - **Phrases** (`content/phrases.yaml`): one entry per phrase. `group` is the section heading. `pinned: yes` also shows the phrase at the top. `open_on_start: yes` opens it when the tab loads (use it on one phrase only).
 - **Stops and dates** (`content/trip.yaml`):
   - `arrive` and `leave` set each stop's dates. The trip's length and the Note tab's days are worked out from them.
