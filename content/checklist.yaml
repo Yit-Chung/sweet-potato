@@ -1,0 +1,32 @@
+# CHECKLIST: the "Before you fly" list on the Trip tab, in this order.
+#
+# Rules that keep this file working:
+#   - Each item starts with "- item:" at the very start of the line.
+#   - The other lines of an item start with exactly two spaces.
+#   - Put text in "double quotes".
+#
+# SAMPLE ITEM (copy it, remove the # signs, then change the values):
+#
+# - item: "Travel insurance"           # What to do or bring.
+#   hint: "Check it covers hiking"     # Optional. A small grey line under it.
+#   ticked: no                         # Optional. yes = already ticked when the app opens.
+
+- item: "eSIM for mobile data"
+  hint: "e.g. Saily · set it up before you fly"
+  ticked: yes
+
+- item: "EasyCard"
+  hint: "MRT, buses and convenience stores · buy one at the airport"
+
+- item: "Hotel addresses in Chinese"
+  hint: "One for each stop · shows as a card in Phrases"
+
+- item: "Plug adapter"
+  hint: "Taiwan uses type A/B plugs, 110V"
+  ticked: yes
+
+- item: "Some cash (TWD)"
+  hint: "Night markets and small shops"
+
+- item: "Google Translate offline Chinese"
+  hint: "Download the pack while on Wi‑Fi"

@@ -1,0 +1,90 @@
+# THE TRIP: who it's for, the stops and dates, and the place categories.
+#
+# Rules that keep this file working:
+#   - Keep the spaces at the start of each line exactly as they are.
+#   - Put text in "double quotes". Dates look like 2026-11-22 (year-month-day).
+#   - Lines starting with # are notes and are ignored by the app.
+#
+# SAMPLE STOP (copy it under "stops:", remove the # signs, then change the values):
+#
+#  - name: "Jiufen"              # English name. Places use this name in their "stop" field.
+#    name_zh: "九份"              # Chinese name.
+#    long_name: "Jiufen & Jinguashi"  # Optional. Longer name shown on the welcome screen.
+#    arrive: 2026-11-22          # Optional. First day at this stop.
+#    leave: 2026-11-23           # Optional. Last day at this stop. Leave out both dates for a
+#                                #   city that's in Explore but not on the trip route.
+#    map_x: 214                  # Optional. Pin position on the Explore map: 0 (left) to 350 (right).
+#    map_y: 40                   # Optional. 0 (top) to 540 (bottom). Leave out both to hide the
+#                                #   stop from Explore.
+
+country: "Taiwan"
+traveller: "Cathryn"
+traveller_from: "U.S.A."
+
+# The friends who made the trip. Their first letters show on the welcome screen.
+friends:
+  - "Kevin"
+  - "Yit"
+
+# Stops in the order of the trip. Explore shows them in this order too.
+stops:
+  - name: "Jiufen"
+    name_zh: "九份"
+    arrive: 2026-11-22
+    leave: 2026-11-23
+    map_x: 214
+    map_y: 40
+
+  - name: "Hualien"
+    name_zh: "花蓮"
+    arrive: 2026-11-23
+    leave: 2026-11-25
+    map_x: 200
+    map_y: 210
+
+  - name: "Tainan"
+    name_zh: "台南"
+    arrive: 2026-11-25
+    leave: 2026-11-28
+    map_x: 60
+    map_y: 380
+
+  - name: "Alishan"
+    name_zh: "阿里山"
+    long_name: "Alishan & Yushan"
+    arrive: 2026-11-28
+    leave: 2026-12-01
+    map_x: 110
+    map_y: 300
+
+  - name: "Sun Moon Lake"
+    name_zh: "日月潭"
+    arrive: 2026-12-01
+    leave: 2026-12-03
+
+  - name: "Taichung"
+    name_zh: "台中"
+    map_x: 80
+    map_y: 200
+
+  - name: "Taipei"
+    name_zh: "台北"
+    arrive: 2026-12-03
+    leave: 2026-12-07
+    map_x: 150
+    map_y: 70
+
+# Every place's "category" must be one of these English names.
+categories:
+  - english: "Food"
+    chinese: "美食"
+  - english: "Sight"
+    chinese: "景點"
+  - english: "Nature"
+    chinese: "自然"
+  - english: "Trail"
+    chinese: "步道"
+  - english: "Shop"
+    chinese: "購物"
+  - english: "Stay"
+    chinese: "住宿"

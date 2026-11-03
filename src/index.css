@@ -1,0 +1,43 @@
+html, body, #root { height: 100%; }
+body { margin: 0; background: #ECECEA; -webkit-font-smoothing: antialiased; }
+button, input, textarea { font-family: inherit; }
+a { color: #111111; }
+a:hover { color: #3D3D3D; }
+textarea::placeholder, input::placeholder { color: #6B6B6B; }
+
+/* The phone column: everything, including sheets and toasts, stays inside it. */
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.screen {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: #FFFFFF;
+  color: #111111;
+  font-family: Inter, 'Noto Sans TC', system-ui, sans-serif;
+}
+
+/* Explore resets buttons completely, like its wireframe. */
+.screen-explore { font-family: 'Noto Sans TC', system-ui, sans-serif; background: #F2F2F2; }
+.screen-explore button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; padding: 0; }
+.screen-explore a:hover { color: #000000; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* Horizontal chip rows scroll by swipe; hide the desktop scrollbar. */
+.hscroll { scrollbar-width: none; }
+.hscroll::-webkit-scrollbar { display: none; }

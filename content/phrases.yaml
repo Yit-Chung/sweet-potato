@@ -1,0 +1,61 @@
+# PHRASES: the phrase cards on the Phrases tab.
+# Phrases are grouped by their "group". Groups appear in the order they first show up here.
+#
+# Rules that keep this file working:
+#   - Each phrase starts with "- group:" at the very start of the line.
+#   - The other lines of a phrase start with exactly two spaces.
+#   - Put text in "double quotes".
+#
+# SAMPLE PHRASE (copy it, remove the # signs, then change the values):
+#
+# - group: "Food"                  # Section heading. Use an existing one or a new one.
+#   english: "No coriander, please"
+#   chinese: "不要香菜"
+#   pinyin: "bú yào xiāngcài"
+#   pinned: no                     # Optional. yes = also shown at the top under "Pinned".
+#   open_on_start: no              # Optional. yes = this card is open when the tab first loads
+#                                  #   (use it on one phrase only).
+
+- group: "Basics"
+  english: "Thank you"
+  chinese: "謝謝"
+  pinyin: "xièxie"
+  pinned: yes
+
+- group: "Basics"
+  english: "Excuse me"
+  chinese: "不好意思"
+  pinyin: "bù hǎoyìsi"
+
+- group: "Basics"
+  english: "Sorry"
+  chinese: "對不起"
+  pinyin: "duìbuqǐ"
+
+- group: "Food"
+  english: "Is it spicy?"
+  chinese: "會辣嗎？"
+  pinyin: "huì là ma?"
+
+- group: "Food"
+  english: "I’m vegetarian, no meat"
+  chinese: "我吃素，不吃肉"
+  pinyin: "wǒ chī sù, bù chī ròu"
+  pinned: yes
+  open_on_start: yes
+
+- group: "Food"
+  english: "To go"
+  chinese: "外帶"
+  pinyin: "wàidài"
+
+- group: "Drinks"
+  english: "Can I have it cold?"
+  chinese: "可以做冰的嗎？"
+  pinyin: "kěyǐ zuò bīng de ma?"
+
+- group: "Drinks"
+  english: "No ice, half sugar"
+  chinese: "去冰，半糖"
+  pinyin: "qù bīng, bàn táng"
+  pinned: yes

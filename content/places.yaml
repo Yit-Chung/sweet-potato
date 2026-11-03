@@ -1,0 +1,238 @@
+# PLACES: every place in the app, one entry per place.
+#
+# Rules that keep this file working:
+#   - Each place starts with "- type:" at the very start of the line.
+#   - The other lines of a place start with exactly two spaces.
+#   - Put text in "double quotes". Dates look like 2026-11-22 (year-month-day).
+#   - Leave out a line you don't need (the ones marked "optional").
+#   - Lines starting with # are notes and are ignored by the app.
+#
+# SAMPLE PLACE (copy it, remove the # signs, then change the values):
+#
+# - type: friend-pick            # friend-pick = a friend's pick, shown in Explore.
+#                                #   my-place = one of the traveller's own saved places.
+#   name: "Amei Teahouse"        # English name.
+#   name_zh: "阿妹茶樓"           # Optional. Chinese name.
+#   stop: "Jiufen"               # A stop name from content/trip.yaml.
+#   date: 2026-11-22             # Optional. The day of the trip it belongs to.
+#   category: "Sight"            # A category from content/trip.yaml (Food, Sight, Nature, Trail, Shop, Stay).
+#   recommended_by: "KuanJen"    # Who recommends it. Needed for friend-pick.
+#   about_recommender: "Local · Taipei · friend of Yit"   # Optional. One short line about them.
+#   why: "My favourite teahouse on the hill."             # Optional. "Why I love it".
+#   what: "Get the oolong set and sit by the window."     # Optional. "What to order or do".
+#   when: "Just before dusk on a weekday."                # Optional. "Best time to go".
+#   translated_from: "Mandarin"  # Optional. Shows "Translated from Mandarin".
+#   photo: "jiufen-amei-teahouse.jpg"   # Optional. A file name from content/photos.
+#   google_maps: "https://maps.app.goo.gl/abc123"   # Optional. Used by the Directions button.
+#   latitude: 25.1092            # Optional. Map position, used for Directions when there's
+#   longitude: 121.8445          #   no Google Maps link.
+
+# ---------- Friends' picks (shown in Explore, under their stop) ----------
+
+- type: friend-pick
+  name: "Amei Teahouse"
+  name_zh: "阿妹茶樓"
+  stop: "Jiufen"
+  date: 2026-11-22
+  category: "Sight"
+  recommended_by: "KuanJen"
+  about_recommender: "Local · Taipei · friend of Yit"
+  why: "My favourite teahouse on the hill. When the red lanterns come on and the fog rolls in, it feels like stepping into an old film."
+  what: "Get the oolong set with the little snacks and ask for a seat by the window. Take your time, they don’t rush you."
+  when: "Just before dusk on a weekday, so you see it in daylight and lit up."
+  translated_from: "Mandarin"
+
+- type: friend-pick
+  name: "Jiufen Old Street"
+  name_zh: "九份老街"
+  stop: "Jiufen"
+  category: "Sight"
+  recommended_by: "Kevin"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Teapot Mountain trail"
+  name_zh: "茶壺山步道"
+  stop: "Jiufen"
+  category: "Trail"
+  recommended_by: "Yit"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Gold Museum"
+  name_zh: "黃金博物館"
+  stop: "Jiufen"
+  category: "Sight"
+  recommended_by: "Kevin"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Taroko Gorge (check open trails)"
+  name_zh: "太魯閣"
+  stop: "Hualien"
+  category: "Nature"
+  recommended_by: "Yit"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Qixingtan Beach"
+  name_zh: "七星潭"
+  stop: "Hualien"
+  category: "Nature"
+  recommended_by: "Kevin"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Dongdamen Night Market"
+  name_zh: "東大門夜市"
+  stop: "Hualien"
+  category: "Food"
+  recommended_by: "Yit"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Alishan Forest Railway"
+  name_zh: "阿里山林業鐵路"
+  stop: "Alishan"
+  category: "Sight"
+  recommended_by: "Kevin"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Zhushan sunrise"
+  name_zh: "祝山觀日"
+  stop: "Alishan"
+  category: "Nature"
+  recommended_by: "Yit"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Giant Tree Trail"
+  name_zh: "巨木群棧道"
+  stop: "Alishan"
+  category: "Trail"
+  recommended_by: "Kevin"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Chihkan Tower"
+  name_zh: "赤崁樓"
+  stop: "Tainan"
+  category: "Sight"
+  recommended_by: "Yit"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Anping Old Fort"
+  name_zh: "安平古堡"
+  stop: "Tainan"
+  category: "Sight"
+  recommended_by: "Kevin"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Shennong Street"
+  name_zh: "神農街"
+  stop: "Tainan"
+  category: "Food"
+  recommended_by: "Yit"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Rainbow Village"
+  name_zh: "彩虹眷村"
+  stop: "Taichung"
+  category: "Sight"
+  recommended_by: "Kevin"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Fengjia Night Market"
+  name_zh: "逢甲夜市"
+  stop: "Taichung"
+  category: "Food"
+  recommended_by: "Yit"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "National Taichung Theater"
+  name_zh: "臺中國家歌劇院"
+  stop: "Taichung"
+  category: "Sight"
+  recommended_by: "Kevin"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Dihua Street"
+  name_zh: "迪化街"
+  stop: "Taipei"
+  category: "Sight"
+  recommended_by: "Yit"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "Gongguan Night Market"
+  name_zh: "公館夜市"
+  stop: "Taipei"
+  category: "Food"
+  recommended_by: "Kevin"
+  about_recommender: "local"
+
+- type: friend-pick
+  name: "You Noodles (vegan)"
+  name_zh: "有麵子蔬食料理"
+  stop: "Taipei"
+  category: "Food"
+  recommended_by: "Yit"
+  about_recommender: "local"
+
+# ---------- The traveller's own saved places (Your places, Share your places) ----------
+# The first one also appears on the Note screen as the place just kept.
+
+- type: my-place
+  name: "Shuqi Road"
+  name_zh: "豎崎路"
+  stop: "Jiufen"
+  date: 2026-11-22
+  category: "Sight"
+  recommended_by: "Cathryn"
+  about_recommender: "Visited Nov 2026 · friend of Yit"
+  why: "When the lanterns come on, the whole staircase glows."
+  what: "I climbed it twice, once in daylight and once after dark."
+  when: "Just after dusk."
+
+- type: my-place
+  name: "Lai Ah-Po Taro Balls"
+  name_zh: "賴阿婆芋圓"
+  stop: "Jiufen"
+  date: 2026-11-22
+  category: "Food"
+  recommended_by: "Cathryn"
+  about_recommender: "Visited Nov 2026 · friend of Yit"
+  why: "Warm, chewy and perfect on a foggy day."
+  what: "I got the mixed bowl and ate it by the window."
+  when: "Around lunch, before the crowds."
+
+- type: my-place
+  name: "Qingshui Cliffs"
+  name_zh: "清水斷崖"
+  stop: "Hualien"
+  date: 2026-11-23
+  category: "Nature"
+  recommended_by: "Cathryn"
+  about_recommender: "Visited Nov 2026 · friend of Yit"
+  why: "The cliffs drop straight into bright blue water."
+  what: "I stopped at the lookout and walked down to the pebble beach."
+  when: "In the morning, when the sea is calm."
+
+- type: my-place
+  name: "Our guesthouse rooftop"
+  name_zh: "民宿頂樓"
+  stop: "Hualien"
+  date: 2026-11-24
+  category: "Stay"
+  recommended_by: "Cathryn"
+  about_recommender: "Visited Nov 2026 · friend of Yit"
+  why: "Where we had coffee and watched the sun come up over the sea."
+  what: "I woke up early and took my coffee upstairs."
+  when: "At sunrise."

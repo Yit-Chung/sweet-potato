@@ -1,0 +1,262 @@
+# WORDING: the text on every screen, grouped by screen.
+#
+# Rules that keep this file working:
+#   - Only change the text inside the "double quotes". Don't rename or remove the
+#     names before the colons (like "title:"), because the screens look them up.
+#   - Words in {curly brackets} are filled in by the app (for example {traveller} becomes
+#     "Cathryn"). Keep them, but you can move them around in the sentence.
+#   - **Two stars** around words make them bold.
+#   - Lines starting with # are notes and are ignored by the app.
+#
+# SAMPLE (how one line looks):
+#
+#   title: "Where to?"     # "title" is the name the screen looks up; the text in quotes is shown.
+
+common:
+  app_name: "Sweet Potato"
+  app_initials: "SP"
+  place_one: "place"
+  place_other: "places"
+  day_chip: "Day {day} · {date}"
+
+tabs:
+  explore: "Explore"
+  trip: "Trip"
+  phrases: "Phrases"
+  note: "Note"
+
+# Screen 1: Welcome + install
+welcome:
+  hero_title: "Hi {traveller}, your {country} trip is ready"
+  hero_text: "Places from people you know, on one map, sorted by stop and day."
+  feature_1_title: "Friends’ picks for every stop"
+  feature_1_text: "Each one says who loves it and why."
+  feature_2_title: "Save the ones you like"
+  feature_2_text: "Add places you find anywhere by pasting a link."
+  feature_3_title: "Works with no signal"
+  feature_3_text: "In the mountains too."
+  private_link_note: "No password. This private link is just for you."
+  start_button: "Let’s go"
+  trip_title: "Is this your trip?"
+  trip_summary: "{stops} stops · {dates} · {days} days"
+  trip_wrong_note: "Something wrong? Tell the friend who sent your link."
+  trip_confirm_button: "Yes, that’s my trip"
+  install_title: "Put it on your home screen"
+  install_text: "So it’s one tap away on the trip, like any other app."
+  install_step_1: "Tap **Share** at the bottom of Safari"
+  install_step_2: "Scroll down, tap **Add to Home Screen**"
+  install_step_3: "Tap **Add** in the top corner"
+  install_done_button: "I’ve added it"
+  install_later_button: "Do it later"
+  open_title: "Now open it from your home screen"
+  open_text: "Your trip saves inside the app, so it works with no signal."
+  open_note: "Once it opens, you can close this tab."
+  saving_title: "Saving your trip…"
+  saved_title: "You’re all set"
+  saving_text_app: "Your whole trip saves inside the app, so it works with no signal, anywhere on the trip."
+  saving_text_browser: "Your whole trip saves in this browser, so it works with no signal."
+  saving_item_maps: "Maps for all {stops} stops"
+  saving_item_places: "{places} places and friends’ notes"
+  saving_item_saved: "Your saved places"
+  saving_item_phrases: "Phrase cards"
+  saved_badge_app: "Saved on this phone"
+  saved_badge_browser: "Saved in this browser"
+  saved_note_app: "Your trip works with no signal, anywhere in {country}."
+  saved_note_browser: "Add it to your home screen anytime. Your trip comes with it."
+  saving_button: "Saving…"
+  go_button: "Go to my trip"
+
+# Screen 2: Explore (and 8c, Explore after the trip)
+explore:
+  news_label: "HEADS UP · 投票日"
+  news_title: "Sat, Nov 28 · Taiwan local elections"
+  news_text: "Trains and buses fill up as people travel home to vote. Book ahead."
+  after_trip_label: "TRIP DONE · WELCOME HOME"
+  after_trip_title: "Share the places you loved?"
+  after_trip_text: "Friends visiting {country} next will see them, with your name."
+  after_trip_button: "Share your places"
+  picked_by: "Picked by {friends} & friends"
+  title: "Where to?"
+  view_label: "View"
+  map_button: "Map"
+  cards_button: "Cards"
+  photo_placeholder: "Photo · {city}"
+  city_card_line: "{city_zh} · {count} picks"
+  map_note: "Offline base map · tap a city"
+  city_subtitle: "{count} picks from friends · offline ready"
+  recommended_by: "Recommended by **{by}**"
+  add_recommendation: "+ Add your recommendation in {city}"
+
+# Screen 2b: Who's recommending
+profile:
+  title: "Who’s recommending?"
+  text: "Friends who visit {country} next will see this next to your places."
+  name_label: "Your name"
+  name_placeholder: "e.g. Cathryn"
+  from_label: "Where are you from?"
+  from_placeholder: "e.g. U.S.A."
+  intro_label: "A short intro"
+  intro_optional: "· optional"
+  intro_placeholder: "e.g. First time in Taiwan, loves hiking"
+  preview_label: "Friends will see"
+  preview_line: "{name} · {from} · visited {month}"
+  preview_name_empty: "Your name"
+  preview_from_empty: "where you’re from"
+  preview_intro_empty: "(no intro yet)"
+  once_note: "You only do this once. Change it anytime."
+  continue_button: "Continue"
+
+# Screen 3: Read a pick
+pick:
+  saved_offline: "Saved offline"
+  recommends: "{by} recommends…"
+  photo_placeholder: "[{by}’s photo]"
+  photo_credit: "Photo by {by}"
+  why_label: "Why I love it"
+  what_label: "What to order or do"
+  when_label: "Best time to go"
+  translated_note: "Translated from {language}"
+  see_original: "See original"
+  save_button: "Save"
+  saved_button: "Saved"
+  visited_button: "Visited"
+  been_button: "Been"
+  directions_button: "Directions"
+
+# Screen 4: Trip tab (checklist)
+checklist:
+  title: "Checklist"
+  subtitle: "Before you fly to {country}"
+  progress: "{done} of {total} done"
+  stays_note: "Your ticks stay on your phone"
+  add_placeholder: "Add your own, e.g. sunscreen"
+  add_button: "Add"
+
+# Screen 5: Phrases tab
+phrases:
+  title: "Phrases"
+  new_button: "+ New"
+  pinned_label: "Pinned · tap to show"
+  food_card_title: "My food card"
+  food_card_text: "4 lines · vegetarian"
+  close_button: "Close"
+  edit_button: "Edit"
+  done_editing_button: "Done editing"
+  full_screen_button: "Full screen"
+  add_phrase_button: "+ Add phrase"
+  done_button: "Done"
+
+# Screens 6 and 8: Note tab
+note:
+  title: "Note"
+  placeholder: "What happened in {stop} today?"
+  example_entry: "Foggy morning in Jiufen. Climbed the lantern stairs twice, once in daylight and once after dark. Taro balls for lunch."
+  place_label: "A place I loved"
+  place_saved: "Saved"
+  private_note: "Only you can see your saved places"
+  see_saved_link: "See all your saved places"
+  keep_button: "+ Keep a place you loved"
+  keep_another_button: "+ Keep another place you loved"
+
+# Screen 7: A place you loved. The form has English and Chinese wording.
+keep_place:
+  # The example link the form starts with, and what it fills in.
+  example_link: "https://maps.app.goo.gl/shuqi-road"
+  example_place_en: "Shuqi Road"
+  example_place_zh: "豎崎路"
+  example_category: "Sight"
+  en:
+    title: "A place you loved"
+    # The sentence the form builds. Keep all five blanks: {stop} {place} {why} {what} {when}
+    sentence: "In {stop}, I loved {place} because {why}. I {what}. Best {when}."
+    blank_stop: "stop"
+    blank_place: "place"
+    blank_why: "why"
+    blank_what: "what you did"
+    blank_when: "when"
+    filling_stop: "Filling in: stop (required)"
+    filling_place: "Filling in: place"
+    filling_why: "Filling in: why you loved it"
+    filling_what: "Filling in: what you did"
+    filling_when: "Filling in: best time"
+    required_note: ""
+    link_label: "Link"
+    link_placeholder: "Google Maps or Instagram link"
+    name_label: "Place name (required)"
+    name_placeholder: "Type the place name"
+    name_placeholder_instagram: "No location on Instagram, type it"
+    from_link_tag: "from link"
+    type_label: "Type (required)"
+    type_from_link: "from link, tap to change"
+    type_pick_one: "Pick one, optional"
+    answer_placeholder: "Write it your way…"
+    photo_button: "Add photo"
+    photo_optional: "optional"
+    save_button: "Save"
+    leave_title: "Save this place?"
+    leave_text: "It stays in your Note. Only you can see it."
+    leave_save: "Save"
+    leave_discard: "Discard"
+    leave_keep_editing: "Keep editing"
+  zh:
+    title: "記下一個你喜歡的地方"
+    sentence: "在{stop}，我很喜歡{place}，因為{why}。我{what}。最好是{when}去。"
+    blank_stop: "停留站"
+    blank_place: "地點"
+    blank_why: "為什麼"
+    blank_what: "做什麼"
+    blank_when: "什麼時候"
+    filling_stop: "正在填：停留站"
+    filling_place: "正在填：地點"
+    filling_why: "正在填：為什麼喜歡"
+    filling_what: "正在填：你做了什麼"
+    filling_when: "正在填：什麼時候去"
+    required_note: "停留站與站點必填，其他可留白"
+    link_label: "連結"
+    link_placeholder: "Google Maps 或 Instagram 連結"
+    name_label: "地點名稱"
+    name_placeholder: "輸入地點名稱"
+    name_placeholder_instagram: "Instagram 沒有地點，請輸入"
+    from_link_tag: "自動帶入"
+    type_label: "類型"
+    type_from_link: "自動帶入，可更改"
+    type_pick_one: "選一個，可省略"
+    answer_placeholder: "寫下你的想法…"
+    photo_button: "貼張照片"
+    photo_optional: "可省略"
+    save_button: "儲存"
+    leave_title: "要儲存這個地方嗎？"
+    leave_text: "會存在你的筆記裡，只有你看得到。"
+    leave_save: "儲存"
+    leave_discard: "捨棄"
+    leave_keep_editing: "繼續編輯"
+
+# Screen 8b: Your saved places
+saved:
+  title: "Your places"
+  count: "{count} saved · only you can see them"
+  add_button: "Add a place"
+  why_label: "Why I loved it"
+  what_label: "What I did"
+  when_label: "Best time to go"
+  preview_note: "Only you can see this. It will look like this if you share it after your trip."
+  delete_button: "Delete"
+  edit_button: "Edit"
+  delete_title: "Delete this place?"
+  delete_text: "It comes out of your Note."
+  cancel_button: "Cancel"
+  deleted_toast: "Place deleted"
+
+# Screen 9: After the trip, share your places
+share:
+  trip_line: "{country} · {dates} · {stops} stops"
+  title: "Your {country} trip is done"
+  intro: "You saved {count} along the way. Want to share them with friends who visit {country} next?"
+  footnote: "Shared places show as “{traveller} recommends…”. You can edit or remove them anytime. The rest stay private in your Note."
+  share_button: "Share {count}"
+  pick_button: "Pick places to share"
+  not_now_button: "Not now"
+  thanks_title: "Thanks, {traveller}"
+  thanks_text_one: "{count} is now a pick for friends who visit {country} next."
+  thanks_text_other: "{count} are now picks for friends who visit {country} next."
+  done_button: "Done"
