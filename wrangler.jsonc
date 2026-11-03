@@ -1,0 +1,11 @@
+// Cloudflare Workers settings: serves the built app (the dist folder) as a static site.
+// Build with "npm run build" first, then publish with "npx wrangler deploy".
+{
+  "name": "sweet-potato",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // Any address that isn't a file gets the app's index.html, so every screen opens directly.
+    "not_found_handling": "single-page-application"
+  }
+}

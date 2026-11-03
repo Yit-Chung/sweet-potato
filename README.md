@@ -146,6 +146,8 @@ The workflow in `.github/workflows/deploy.yml` runs every time something changes
 2. In the repository, go to **Settings → Pages**. Under **Build and deployment → Source**, choose **GitHub Actions**.
 3. After the first run, the site's address is shown on that page. It looks like `https://<account>.github.io/<repository>/`.
 
+**Cloudflare Workers** can publish the same site. `wrangler.jsonc` holds its settings: the Worker is named `sweet-potato` and serves the built `dist` folder. In Cloudflare, set the build command to `npm run build` and the deploy command to `npx wrangler deploy`. `.node-version` tells Cloudflare to build with Node.js 24.
+
 ---
 
 ## Files you never need to touch
@@ -155,6 +157,6 @@ Everything outside `content/`:
 - `src/`: the screens and layout
 - `scripts/`: the content check and photo resizing
 - `.github/`: publishing
-- `index.html`, `package.json`, `package-lock.json`, `tsconfig.json`, `vite.config.ts`, `.gitignore`
+- `index.html`, `package.json`, `package-lock.json`, `tsconfig.json`, `vite.config.ts`, `wrangler.jsonc`, `.node-version`, `.gitignore`
 
 If a content change seems to need one of these (a new screen, a new kind of field), that's a job for a developer.
